@@ -4,24 +4,19 @@ namespace db {
 
     Index::Index(const std::string& fieldName) : indexFieldName(fieldName) {}
 
-    Index::~Index() {}
-
-    void Index::insertRecord(const db::Record& record) {
-        std::string keyValue = record.getValue(indexFieldName);
+    void Index::insertRecord(const Record& record) {
+        std::string keyValue = record.getValue(indexFieldName).asString();
         indexData[keyValue][record.getRecordId()] = record;
     }
 
     void Index::deleteRecord(int recordId) {
-        for (auto& pair : indexData) {
-            pair.second.erase(recordId);
-        }
+        // Remove from index
     }
 
-    std::map<int, db::Record> Index::search(const std::string& key) const {
+    std::map<int, Record> Index::search(const std::string& key) const {
         auto it = indexData.find(key);
-        if (it != indexData.end()) {
+        if (it != indexData.end())
             return it->second;
-        }
         return {};
     }
 

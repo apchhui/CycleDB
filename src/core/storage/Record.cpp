@@ -10,15 +10,14 @@ namespace db {
         return recordId;
     }
 
-    std::string Record::getValue(const std::string& fieldName) const {
+    Value Record::getValue(const std::string& fieldName) const {
         auto it = fields.find(fieldName);
-        if (it != fields.end()) {
+        if (it != fields.end())
             return it->second;
-        }
-        return "";
+        throw std::out_of_range("Field not found");
     }
 
-    void Record::setValue(const std::string& fieldName, const std::string& value) {
+    void Record::setValue(const std::string& fieldName, const Value& value) {
         fields[fieldName] = value;
     }
 

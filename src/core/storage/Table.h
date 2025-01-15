@@ -1,32 +1,29 @@
 #ifndef TABLE_H
 #define TABLE_H
 
-#include <vector>
-#include <map>
 #include <string>
+#include <vector>
 #include "Record.h"
+#include "Schema.h"
 #include "Index.h"
 
 namespace db {
     class Table {
     public:
-        Table(const std::string& name);
-        ~Table();
-
-        void insertRecord(const db::Record& record);
+        Table(const std::string& name, const Schema& schema);
+        void insertRecord(const Record& record);
         void deleteRecord(int recordId);
-        void updateRecord(int recordId, const std::map<std::string, std::string>& newValues);
-        db::Record getRecord(int recordId) const;
-
+        void updateRecord(int recordId, const std::map<std::string, Value>& newValues);
+        Record getRecord(int recordId) const;
         void addIndex(const std::string& fieldName);
-        std::map<int, db::Record> searchIndex(const std::string& fieldName, const std::string& key) const;
 
     private:
         std::string tableName;
-        std::vector<db::Record> records;
-        std::map<std::string, db::Index> indexes;
+        Schema schema;
+        std::vector<Record> records;
+        std::map<std::string, Index> indexes;
         int nextRecordId;
     };
 }
 
-#endif
+#endif // TABLE_H

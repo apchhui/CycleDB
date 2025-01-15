@@ -3,6 +3,7 @@
 
 #include <map>
 #include <string>
+#include "Value.h"
 
 namespace db {
     class Record {
@@ -11,13 +12,13 @@ namespace db {
         ~Record();
 
         int getRecordId() const;
-        std::string getValue(const std::string& fieldName) const;
-        void setValue(const std::string& fieldName, const std::string& value);
+        Value getValue(const std::string& fieldName) const;
+        void setValue(const std::string& fieldName, const Value& value);
 
     private:
         int recordId;
-        std::map<std::string, std::string> fields;
+        std::map<std::string, Value> fields;
     };
 }
 
-#endif
+#endif // RECORD_H
