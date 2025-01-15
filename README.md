@@ -18,7 +18,7 @@ CycleDB — это приложение, предназначенное для �
 1. Склонируйте репозиторий:
 
     ```bash
-    git clone https://github.com/yourusername/CycleDB.git
+    git clone https://github.com/apchhui/CycleDB.git
     cd CycleDB
     ```
 
