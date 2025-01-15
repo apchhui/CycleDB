@@ -1,0 +1,20 @@
+[
+{
+  "directory": "C:/Users/apchhui/Documents/cycle/products/CycleDB/build",
+  "command": "C:\\Users\\apchhui\\Downloads\\winlibs-x86_64-posix-seh-gcc-14.2.0-llvm-19.1.1-mingw-w64ucrt-12.0.0-r2\\mingw64\\bin\\g++.exe  @CMakeFiles/Database.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\Database.dir\\src\\main.cpp.obj -c C:\\Users\\apchhui\\Documents\\cycle\\products\\CycleDB\\src\\main.cpp",
+  "file": "C:/Users/apchhui/Documents/cycle/products/CycleDB/src/main.cpp",
+  "output": "CMakeFiles/Database.dir/src/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/apchhui/Documents/cycle/products/CycleDB/build",
+  "command": "C:\\Users\\apchhui\\Downloads\\winlibs-x86_64-posix-seh-gcc-14.2.0-llvm-19.1.1-mingw-w64ucrt-12.0.0-r2\\mingw64\\bin\\g++.exe  @CMakeFiles/Database.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\Database.dir\\src\\Database.cpp.obj -c C:\\Users\\apchhui\\Documents\\cycle\\products\\CycleDB\\src\\Database.cpp",
+  "file": "C:/Users/apchhui/Documents/cycle/products/CycleDB/src/Database.cpp",
+  "output": "CMakeFiles/Database.dir/src/Database.cpp.obj"
+},
+{
+  "directory": "C:/Users/apchhui/Documents/cycle/products/CycleDB/build",
+  "command": "C:\\Users\\apchhui\\Downloads\\winlibs-x86_64-posix-seh-gcc-14.2.0-llvm-19.1.1-mingw-w64ucrt-12.0.0-r2\\mingw64\\bin\\g++.exe  @CMakeFiles/Database.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\Database.dir\\src\\helpers.cpp.obj -c C:\\Users\\apchhui\\Documents\\cycle\\products\\CycleDB\\src\\helpers.cpp",
+  "file": "C:/Users/apchhui/Documents/cycle/products/CycleDB/src/helpers.cpp",
+  "output": "CMakeFiles/Database.dir/src/helpers.cpp.obj"
+}
+]
