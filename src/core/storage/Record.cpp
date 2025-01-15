@@ -2,6 +2,8 @@
 
 namespace db {
 
+    Record::Record() : recordId(-1) {}
+
     Record::Record(int id) : recordId(id) {}
 
     Record::~Record() {}

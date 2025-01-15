@@ -3,21 +3,23 @@
 
 #include <vector>
 #include <string>
-#include "DataType.h"
+#include "core/storage/Value.h"
 
-class Schema {
-public:
-    struct Column {
-        std::string name;
-        DataType type;
-        bool isNullable;
+namespace db {
+    class Schema {
+    public:
+        struct Column {
+            std::string name;
+            DataType type;
+            bool isNullable;
+        };
+
+        void addColumn(const std::string& name, DataType type, bool isNullable = false);
+        const Column& getColumn(const std::string& name) const;
+
+    private:
+        std::vector<Column> columns;
     };
-
-    void addColumn(const std::string& name, DataType type, bool isNullable = false);
-    const Column& getColumn(const std::string& name) const;
-
-private:
-    std::vector<Column> columns;
-};
+}
 
 #endif // SCHEMA_H

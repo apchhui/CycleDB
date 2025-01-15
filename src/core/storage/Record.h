@@ -8,6 +8,7 @@
 namespace db {
     class Record {
     public:
+        Record();
         Record(int id);
         ~Record();
 

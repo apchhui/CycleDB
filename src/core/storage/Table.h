@@ -4,24 +4,19 @@
 #include <string>
 #include <vector>
 #include "Record.h"
-#include "Schema.h"
-#include "Index.h"
 
 namespace db {
     class Table {
     public:
-        Table(const std::string& name, const Schema& schema);
+        Table(const std::string& name);
+        int getNextRecordID();
         void insertRecord(const Record& record);
-        void deleteRecord(int recordId);
-        void updateRecord(int recordId, const std::map<std::string, Value>& newValues);
-        Record getRecord(int recordId) const;
-        void addIndex(const std::string& fieldName);
+        void updateRecord(int recordID, const Record& newRecord);
+        void deleteRecord(int recordID);
 
     private:
         std::string tableName;
-        Schema schema;
         std::vector<Record> records;
-        std::map<std::string, Index> indexes;
         int nextRecordId;
     };
 }

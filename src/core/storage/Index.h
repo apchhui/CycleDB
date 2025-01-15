@@ -3,7 +3,7 @@
 
 #include <map>
 #include <string>
-#include "Record.h"
+#include "core/storage/Record.h"
 
 namespace db {
     class Index {
