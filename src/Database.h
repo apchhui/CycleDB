@@ -21,7 +21,6 @@ public:
     void load();
     void print_tables();
 
-    // Добавляем метод для доступа к таблицам
     const std::map<std::string, std::pair<std::vector<std::string>, std::vector<std::vector<std::string>>>>& get_tables() const;
 
 private:
